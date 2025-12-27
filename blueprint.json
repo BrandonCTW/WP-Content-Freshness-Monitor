@@ -1,0 +1,30 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/admin.php?page=content-freshness-monitor",
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/YOUR_USERNAME/content-freshness-monitor/releases/latest/download/content-freshness-monitor.zip"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "content-freshness-monitor/content-freshness-monitor.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire_once 'wordpress/wp-load.php';\n\n// Create sample posts with various ages to demonstrate the plugin\n$sample_posts = array(\n    array(\n        'title' => 'Welcome to Our Blog',\n        'days_old' => 30,\n        'content' => 'This is a recent blog post that should appear as fresh content.'\n    ),\n    array(\n        'title' => 'Getting Started Guide',\n        'days_old' => 120,\n        'content' => 'This post is a few months old and shows as aging content.'\n    ),\n    array(\n        'title' => 'Company History',\n        'days_old' => 250,\n        'content' => 'This is stale content that needs to be reviewed and updated.'\n    ),\n    array(\n        'title' => 'Product Features Overview',\n        'days_old' => 400,\n        'content' => 'This very old post demonstrates how the plugin identifies stale content.'\n    ),\n    array(\n        'title' => 'Latest News Update',\n        'days_old' => 7,\n        'content' => 'Very recent content that appears as fresh.'\n    ),\n    array(\n        'title' => 'Annual Report Summary',\n        'days_old' => 365,\n        'content' => 'Content from a year ago that definitely needs attention.'\n    ),\n    array(\n        'title' => 'Team Introduction',\n        'days_old' => 200,\n        'content' => 'Stale content about the team that should be updated.'\n    ),\n    array(\n        'title' => 'Services We Offer',\n        'days_old' => 90,\n        'content' => 'Content approaching staleness threshold.'\n    )\n);\n\nforeach ($sample_posts as $post_data) {\n    $post_date = date('Y-m-d H:i:s', strtotime('-' . $post_data['days_old'] . ' days'));\n    \n    wp_insert_post(array(\n        'post_title'    => $post_data['title'],\n        'post_content'  => $post_data['content'],\n        'post_status'   => 'publish',\n        'post_type'     => 'post',\n        'post_date'     => $post_date,\n        'post_date_gmt' => get_gmt_from_date($post_date)\n    ));\n}\n\n// Create a sample page too\nwp_insert_post(array(\n    'post_title'    => 'About Us',\n    'post_content'  => 'This page is old and needs updating.',\n    'post_status'   => 'publish',\n    'post_type'     => 'page',\n    'post_date'     => date('Y-m-d H:i:s', strtotime('-300 days')),\n    'post_date_gmt' => get_gmt_from_date(date('Y-m-d H:i:s', strtotime('-300 days')))\n));\n\necho 'Sample content created successfully!';\n"
+		}
+	]
+}

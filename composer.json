@@ -1,0 +1,64 @@
+{
+    "name": "content-freshness-monitor/content-freshness-monitor",
+    "description": "WordPress plugin that identifies stale content to help keep your site fresh and SEO-friendly",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/YOUR_USERNAME/content-freshness-monitor",
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "content",
+        "freshness",
+        "seo",
+        "stale-content"
+    ],
+    "authors": [
+        {
+            "name": "Content Freshness Monitor Contributors"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "wp-coding-standards/wpcs": "^3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "yoast/phpunit-polyfills": "^2.0",
+        "phpstan/phpstan": "^1.10",
+        "szepeviktor/phpstan-wordpress": "^1.3"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-html coverage",
+        "phpcs": "phpcs --standard=WordPress-Core --extensions=php --ignore=vendor,node_modules .",
+        "phpcs:fix": "phpcbf --standard=WordPress-Core --extensions=php --ignore=vendor,node_modules .",
+        "lint": "@phpcs",
+        "phpstan": "phpstan analyse",
+        "security-check": "composer audit"
+    },
+    "scripts-descriptions": {
+        "test": "Run PHPUnit test suite",
+        "test:coverage": "Run PHPUnit with HTML coverage report",
+        "phpcs": "Check code against WordPress Coding Standards",
+        "phpcs:fix": "Auto-fix WordPress Coding Standards violations",
+        "lint": "Alias for phpcs",
+        "phpstan": "Run PHPStan static analysis",
+        "security-check": "Check dependencies for known security vulnerabilities"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

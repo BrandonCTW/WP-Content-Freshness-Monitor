@@ -1,0 +1,24 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+
+parameters:
+    level: 6
+    paths:
+        - content-freshness-monitor.php
+        - includes/
+        - uninstall.php
+    excludePaths:
+        - vendor/
+        - tests/
+        - node_modules/
+    bootstrapFiles:
+        - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    checkMissingIterableValueType: false
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        # WordPress global functions that may not be recognized
+        - '#Function wp_create_nonce not found#'
+        - '#Function check_ajax_referer not found#'
+        # WP_CLI class checks (only loaded when WP_CLI is defined)
+        - '#Class WP_CLI not found#'
+        - '#Class WP_CLI_Command not found#'

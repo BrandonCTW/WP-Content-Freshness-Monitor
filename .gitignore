@@ -1,0 +1,42 @@
+# Archive (private development files)
+_archive/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Credentials (sensitive)
+.credentials.json
+**/credentials.json
+**/.credentials.json
+
+# Debug files
+claude-config/
+claude-debug/
+claude-stats/
+claude-projects/
+
+# Build artifacts
+output/
+*.tar.gz
+*.zip
+
+# Composer
+/vendor/
+
+# PHPUnit
+.phpunit.result.cache

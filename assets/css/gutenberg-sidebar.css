@@ -1,0 +1,170 @@
+/**
+ * Content Freshness Monitor - Gutenberg Sidebar Styles
+ */
+
+/* Sidebar icon colors */
+.cfm-sidebar-icon {
+    fill: currentColor;
+}
+
+.cfm-sidebar-icon.cfm-fresh {
+    fill: #00a32a;
+}
+
+.cfm-sidebar-icon.cfm-aging {
+    fill: #dba617;
+}
+
+.cfm-sidebar-icon.cfm-stale {
+    fill: #d63638;
+}
+
+/* Status section */
+.cfm-sidebar-status {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.cfm-sidebar-status .cfm-sidebar-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.cfm-sidebar-status-text {
+    flex: 1;
+}
+
+/* Status badge */
+.cfm-status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cfm-status-badge.cfm-fresh {
+    background: #edfaef;
+    color: #00a32a;
+}
+
+.cfm-status-badge.cfm-aging {
+    background: #fcf9e8;
+    color: #996800;
+}
+
+.cfm-status-badge.cfm-stale {
+    background: #fcecec;
+    color: #d63638;
+}
+
+/* Description text */
+.cfm-sidebar-description {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #646970;
+    line-height: 1.5;
+}
+
+/* Info section */
+.cfm-sidebar-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cfm-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.cfm-info-row:last-child {
+    border-bottom: none;
+}
+
+.cfm-info-label {
+    font-size: 13px;
+    color: #646970;
+}
+
+.cfm-info-value {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1d2327;
+}
+
+.cfm-days-value.cfm-fresh {
+    color: #00a32a;
+}
+
+.cfm-days-value.cfm-aging {
+    color: #996800;
+}
+
+.cfm-days-value.cfm-stale {
+    color: #d63638;
+    font-weight: 600;
+}
+
+/* Actions section */
+.cfm-sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cfm-sidebar-actions .components-button {
+    justify-content: center;
+    width: 100%;
+}
+
+.cfm-review-button.cfm-reviewed {
+    background: #00a32a !important;
+    border-color: #00a32a !important;
+}
+
+.cfm-settings-button {
+    font-size: 13px;
+}
+
+/* Panel body adjustments */
+.editor-sidebar .cfm-sidebar-status,
+.interface-interface-skeleton__sidebar .cfm-sidebar-status {
+    margin: -8px 0;
+}
+
+/* Dark mode / high contrast adjustments */
+@media (prefers-color-scheme: dark) {
+    .cfm-status-badge.cfm-fresh {
+        background: rgba(0, 163, 42, 0.15);
+    }
+
+    .cfm-status-badge.cfm-aging {
+        background: rgba(219, 166, 23, 0.15);
+    }
+
+    .cfm-status-badge.cfm-stale {
+        background: rgba(214, 54, 56, 0.15);
+    }
+
+    .cfm-info-row {
+        border-bottom-color: #3c434a;
+    }
+
+    .cfm-sidebar-description,
+    .cfm-info-label {
+        color: #a7aaad;
+    }
+
+    .cfm-info-value {
+        color: #f0f0f1;
+    }
+}

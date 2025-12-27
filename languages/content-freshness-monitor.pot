@@ -1,0 +1,216 @@
+# Copyright (C) 2025 CalTech Web
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Content Freshness Monitor 2.7.1\n"
+"Report-Msgid-Bugs-To: https://github.com/caltechweb/content-freshness-monitor/issues\n"
+"POT-Creation-Date: 2025-12-27T00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: WordPress\n"
+"X-Domain: content-freshness-monitor\n"
+
+#. Plugin Name of the plugin
+msgid "Content Freshness Monitor"
+msgstr ""
+
+#. Description of the plugin
+msgid "Monitor and manage stale content on your WordPress site. Get alerts when posts need updating."
+msgstr ""
+
+#: includes/class-cfm-dashboard-widget.php:29
+#: includes/class-cfm-settings.php:25
+#: includes/class-cfm-settings.php:26
+#: includes/class-cfm-admin.php:25
+#: includes/class-cfm-admin.php:26
+msgid "Content Freshness"
+msgstr ""
+
+#: includes/class-cfm-dashboard-widget.php:46
+#: includes/class-cfm-dashboard-widget.php:54
+msgid "Stale"
+msgstr ""
+
+#: includes/class-cfm-dashboard-widget.php:50
+msgid "Fresh"
+msgstr ""
+
+#. translators: %d: percentage of fresh content
+#: includes/class-cfm-dashboard-widget.php:68
+msgid "%d%% of your content is fresh"
+msgstr ""
+
+#: includes/class-cfm-dashboard-widget.php:76
+msgid "Needs Attention"
+msgstr ""
+
+#: includes/class-cfm-dashboard-widget.php:90
+msgid "All content is fresh!"
+msgstr ""
+
+#: includes/class-cfm-dashboard-widget.php:96
+msgid "View All"
+msgstr ""
+
+#: includes/class-cfm-settings.php:25
+msgid "Content Freshness Settings"
+msgstr ""
+
+#: includes/class-cfm-settings.php:46
+msgid "General Settings"
+msgstr ""
+
+#: includes/class-cfm-settings.php:54
+msgid "Staleness Threshold (days)"
+msgstr ""
+
+#: includes/class-cfm-settings.php:63
+msgid "Post Types to Monitor"
+msgstr ""
+
+#: includes/class-cfm-settings.php:72
+msgid "Show Freshness in Post List"
+msgstr ""
+
+#: includes/class-cfm-settings.php:81
+msgid "Exclude Post IDs"
+msgstr ""
+
+#: includes/class-cfm-settings.php:92
+msgid "Configure how content freshness is monitored."
+msgstr ""
+
+#: includes/class-cfm-settings.php:110
+msgid "Content older than this will be flagged as stale. Default: 180 days (6 months)."
+msgstr ""
+
+#: includes/class-cfm-settings.php:154
+msgid "Show freshness status column in post list tables."
+msgstr ""
+
+#: includes/class-cfm-settings.php:173
+msgid "Comma-separated list of post IDs to exclude from monitoring."
+msgstr ""
+
+#: includes/class-cfm-scanner.php:226
+#: includes/class-cfm-scanner.php:251
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-cfm-scanner.php:232
+msgid "Invalid post."
+msgstr ""
+
+#: includes/class-cfm-scanner.php:239
+msgid "Marked as reviewed."
+msgstr ""
+
+#: includes/class-cfm-scanner.php:257
+msgid "No posts selected."
+msgstr ""
+
+#: includes/class-cfm-scanner.php:292
+msgid "Fresh"
+msgstr ""
+
+#: includes/class-cfm-scanner.php:297
+msgid "Aging"
+msgstr ""
+
+#: includes/class-cfm-scanner.php:302
+msgid "Stale"
+msgstr ""
+
+#: includes/class-cfm-admin.php:61
+msgid "Freshness"
+msgstr ""
+
+#. translators: %d: number of days since last modification
+#: includes/class-cfm-admin.php:86
+msgid "Last modified %d days ago"
+msgstr ""
+
+#: includes/class-cfm-admin.php:118
+msgid "Content Freshness Monitor"
+msgstr ""
+
+#: includes/class-cfm-admin.php:124
+msgid "Total Posts"
+msgstr ""
+
+#: includes/class-cfm-admin.php:128
+msgid "Stale Posts"
+msgstr ""
+
+#: includes/class-cfm-admin.php:132
+msgid "Fresh Posts"
+msgstr ""
+
+#: includes/class-cfm-admin.php:136
+msgid "Need Attention"
+msgstr ""
+
+#. translators: %d: number of days for staleness threshold
+#: includes/class-cfm-admin.php:144
+msgid "Posts not modified in over %d days are considered stale."
+msgstr ""
+
+#: includes/class-cfm-admin.php:149
+msgid "Change settings"
+msgstr ""
+
+#: includes/class-cfm-admin.php:156
+msgid "Great news! All your content is fresh."
+msgstr ""
+
+#: includes/class-cfm-admin.php:163
+msgid "Select All"
+msgstr ""
+
+#: includes/class-cfm-admin.php:166
+msgid "Mark Selected as Reviewed"
+msgstr ""
+
+#: includes/class-cfm-admin.php:178
+msgid "Title"
+msgstr ""
+
+#: includes/class-cfm-admin.php:181
+msgid "Type"
+msgstr ""
+
+#: includes/class-cfm-admin.php:184
+msgid "Author"
+msgstr ""
+
+#: includes/class-cfm-admin.php:194
+msgid "Last Modified"
+msgstr ""
+
+#: includes/class-cfm-admin.php:199
+msgid "Last Reviewed"
+msgstr ""
+
+#: includes/class-cfm-admin.php:202
+msgid "Actions"
+msgstr ""
+
+#: includes/class-cfm-admin.php:221
+msgid "Edit"
+msgstr ""
+
+#: includes/class-cfm-admin.php:226
+msgid "View"
+msgstr ""
+
+#: includes/class-cfm-admin.php:249
+msgid "Never"
+msgstr ""
+
+#: includes/class-cfm-admin.php:254
+msgid "Mark Reviewed"
+msgstr ""
